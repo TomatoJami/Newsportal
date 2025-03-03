@@ -16,7 +16,7 @@
                 <li><a href="#">Kategooriad<i class="fa fa-angle-down"></i></a>
                 <ul class="submenu">
                     <?php
-                        Contoller::AllCategory();
+                        Controller::AllCategory();
                     ?>
                 </ul>
             </li>
@@ -30,7 +30,7 @@
         <section>
             <div class = 'divBox'>
                 <?php
-                if(isset(%content)) {
+                if(isset($content)) {
                     echo $content;
                 }
                 else {

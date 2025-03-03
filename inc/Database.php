@@ -19,7 +19,7 @@ class database {
     }
 
     function connect() {
-        if ($this->conn) {
+        if (!$this->conn) {
             try {
                 $this->conn = new PDO('mysql:host='.$this->host.';dbname='.$this->baseName.'', $this->user, $this->password, array(PDO:: MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
             }
@@ -45,9 +45,6 @@ class database {
     }
 
     function getAll($query) {
-        // var_dump ($this);
-        // echo $query;
-        // die();
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
