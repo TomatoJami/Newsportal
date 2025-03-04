@@ -19,6 +19,14 @@
         $response = controllerAdminNews::NewsList();
     }
 
+        elseif($path == 'newsAdd.php' OR $path == 'newsAdd') {
+            $response = controllerAdminNews::newsAddForm();
+        }
+
+    elseif($path == 'newsAddResult.php' OR $path == 'newsAddResult') {
+        $response = controllerAdminNews::newsAddResult();
+    }
+
     else {
         $response = controllerAdmin::error404();
     }
