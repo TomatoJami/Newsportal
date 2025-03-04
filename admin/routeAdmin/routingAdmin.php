@@ -15,6 +15,10 @@
         $response = controllerAdmin::logoutAction();
     }
 
+    elseif($path == 'newsAdmin.php' OR $path == 'newsAdmin') {
+        $response = controllerAdminNews::NewsList();
+    }
+
     else {
         $response = controllerAdmin::error404();
     }
