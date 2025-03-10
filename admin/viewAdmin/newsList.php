@@ -20,7 +20,7 @@
             echo '<tr>';
             echo '<td>'.$row['id'].'</td>';
             echo '<td><b>Title: </b> '.$row['title'].'<br>';
-            echo '<b>Категория: </b><i>'.$row['category'].'</i></td>';
+            echo '<b>Категория: </b><i>'.$row['name'].'</i></td>';
             echo '<td>
                     <a href="newsEdit?id='.$row['id'].'" class="btn btn-sm btn-primary">Edit</a> 
                     <a href="newsDel?id='.$row['id'].'" class="btn btn-sm btn-danger">Delete</a>

@@ -27,6 +27,14 @@
         $response = controllerAdminNews::newsAddResult();
     }
 
+        elseif($path == 'newsEdit.php' OR $path == 'newsEdit' && isset($_GET['id'])) {
+            $response = controllerAdminNews::newsEditForm($_GET['id']);
+        }
+    
+    elseif($path == 'newsEditResult.php' OR $path == 'newsEditResult' && isset($_GET['id'])) {
+        $response = controllerAdminNews::newsEditResult($_GET['id']);
+    }
+
     else {
         $response = controllerAdmin::error404();
     }
